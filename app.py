@@ -8,10 +8,10 @@ df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapmi
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
-app.layout = html.Div([[
+app.layout = html.Div([
     html.H1(children='Title of Dash App', style={'textAlign':'center'}),
     dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
-    dcc.Graph(id='graph-content')
+    dcc.Graph(id='graph-content'),
 ])
 
 @callback(
