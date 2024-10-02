@@ -6,7 +6,7 @@ import pandas as pd
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv')
 
-app = dash.Dash(__name__)
+app = Dash(__name__)
 server = app.server
 
 app.layout = [
